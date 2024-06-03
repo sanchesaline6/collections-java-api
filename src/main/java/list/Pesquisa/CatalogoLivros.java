@@ -1,4 +1,4 @@
-package main.java.list.OperacoesBasicas;
+package main.java.list.Pesquisa;
 
 import java.util.ArrayList;
 
@@ -36,14 +36,13 @@ public class CatalogoLivros {
         return livrosEncontrados;
     }
 
-    public ArrayList<Livro> pesquisarPorTitulo(String titulo){
-        ArrayList<Livro> livrosEncontrados = new ArrayList<>();
+    public Livro pesquisarPorTitulo(String titulo){
         for(Livro livro: listaLivros){
             if(livro.getTitulo().equalsIgnoreCase(titulo)){
-                livrosEncontrados.add(livro);
+                return livro;
             }
         }
 
-        return livrosEncontrados;
+        return null;
     }
 }
